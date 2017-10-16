@@ -39,15 +39,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Button content='Rock' setChoice={this.setChoice}/>
-        <Button content='Paper' setChoice={this.setChoice}/>
-        <Button content='Scissors' setChoice={this.setChoice}/>
+        <div className="play">
+          <Button content='Rock' setChoice={this.setChoice}/>
+          <Button content='Paper' setChoice={this.setChoice}/>
+          <Button content='Scissors' setChoice={this.setChoice}/>
+        </div>
         <p>user choice: {this.state.userChoice}</p>
-        <img src={this.state.userChoice==='Rock'? './rock.png' : this.state.userChoice==='Scissors'? './scissors.png' : './paper.png'}/>
         <p>user score: {this.state.userScore}</p>
+        <img src={this.state.userChoice==='Rock'? './rock.png' : this.state.userChoice==='Scissors'? './scissors.png' : './paper.png'}/>
         <p>computer choice: {this.state.computerChoice}</p>
-        <img src={this.state.computerChoice==='Rock'? './rock.png' : this.state.computerChoice==='Scissors'? './scissors.png' : './paper.png'}/>
         <p>computer score: {this.state.computerScore}</p>
+        <img src={this.state.computerChoice==='Rock'? './rock.png' : this.state.computerChoice==='Scissors'? './scissors.png' : './paper.png'}/>
       </div>
     );
   };
